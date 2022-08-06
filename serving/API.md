@@ -6,7 +6,7 @@ Both resquest body and response body should be in Json format.
 
 **HTTP Code**
 
-For simplicity (and it satisfied for now), services only return an HTTP Code from below 3 alternatives,
+For simplicity (and it satisfies for now), services only return an HTTP Code from below 3 alternatives,
 
 * 200: operation succeeded or other normal cases.
 * 400: invalid input or operation failed.
@@ -59,7 +59,7 @@ Below lists current set of status code and descriptions.
 
 ### Request & Response Document
 
-| Function | URL | HTTP Method | Payload demo (in json) | Succeeded Response |
+| Function | URL | HTTP Method | Payload Demo | Succeeded Response Demo |
 |---|---|---|---|---|
 | CreateUser | /user | POST | {"user_name": "uname1", "password": "pwd1"} | {"status": 20002, "message": "user created"} |
 | DeleteUser | /user | DELETE | {"user_name": "uname1", "password": "pwd1"} | {"status": 20003, "message": "user deleted"} |
