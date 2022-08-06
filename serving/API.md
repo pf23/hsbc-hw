@@ -1,13 +1,20 @@
 ## HTTP API Document
 
-### Response
+Both resquest body and response body should be in Json format.
 
-For HTTP Code, there are 2 cases,
+### Rule for Response
+
+**HTTP Code**
+
+For simplicity (and it satisfied for now), services only return an HTTP Code from below 3 alternatives,
 
 * 200: operation succeeded or other normal cases.
-* 400: operation failed or invalid input.
+* 400: invalid input or operation failed.
+* 500: severe interval error.
 
-The response body is as follow, where status is a server-internal code with detailed message to explain what happened.
+**Body Format**
+
+The response body format is defined as follow, with an internal status code and description message to explain what happened, carrying extra data if needed.
 
 ```json
 {
@@ -17,7 +24,9 @@ The response body is as follow, where status is a server-internal code with deta
 }
 ```
 
-Current list of status code and description, check `../model/status.go` for details.
+**Status Code**
+
+Below lists current set of status code and descriptions.
 
 ```
 10000 unknown
@@ -44,6 +53,8 @@ Current list of status code and description, check `../model/status.go` for deta
 40019 token expired
 40020 token is invalid
 40021 token role not found
+
+50000 internal
 ```
 
 ### Request & Response Document

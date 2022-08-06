@@ -1,3 +1,15 @@
+# Simple authentication and authorization service
+
+## Feature notations
+
+This is a Golang implementation of `a simple authentication and authorization service`. According to requirements, the project
+
+1. hosts a HTTP server to provide services,
+2. uses in-memory storage (can be adapted to other storage by conforming to interfaces),
+3. is implemented mostly by Go built-in packages (except a unit-test library),
+
+For detailed HTTP API document, please check [serving/API.md)](serving/API.md)
+
 ## Directory
 
 ```markdown
@@ -10,7 +22,7 @@
 ├── model                   # data relation model and storage engine
 │   ├── go.mod
 │   ├── go.sum
-│   ├── inmem_test.go       # unit test for inmem.go
+│   ├── inmem_test.go       # unit tests for inmem.go
 │   ├── inmem.go            # in-memory implementation of interface in model.go
 │   ├── model.go            # data model and storage interface definition
 │   └── status.go           # status code and description
@@ -18,7 +30,7 @@
 ├── serving                 # implementation of services
 │   ├── go.mod
 │   ├── go.sum
-│   ├── handler_test.go     # function test HTTP implementation
+│   ├── handler_test.go     # function tests for HTTP implementation
 │   ├── handler.go          # handlers for HTTP APIs
 │   └── README.md           # HTTP API documentations
 │
@@ -32,22 +44,13 @@
 └── README.md
 ```
 
-## Feature notations
-
-This is a Golang implementation of `a simple authentication and authorization service`. According to requirements, the project
-
-1. hosts a HTTP server to provide services,
-2. uses in-memory storage,
-3. is implemented mostly by language built-in packages (except a unit-test library)
-4. for HTTP API document, please check `serving/README.md`
-
 ## How to build & run
 
 > Assume you are under Linux or MacOS env.
 
-* Build & run from go project
+* Build & run using language go
 
-  Requirements: go version >= 1.5
+  Requirements: go version >= 1.15
 
   ```sh
   cd cmd/
