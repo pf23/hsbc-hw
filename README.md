@@ -41,27 +41,40 @@ For detailed HTTP API document, please check [serving/API.md)](serving/API.md)
 ├── build.sh
 ├── format.sh               # script to format the code
 ├── hsbc-hw.md              # task description and requirements
-└── README.md
+├── README.md
+├── run_docker.sh
+├── run.sh
+└── server.Dockerfile
 ```
 
 ## How to build & run
 
-> Assume you are under Linux or MacOS env.
-
-* Build & run using language go
+* Build & run under Linux or MacOS
 
   Requirements: go version >= 1.15
 
   ```sh
-  cd cmd/
-  go build -o server
-  ./server --port 8080
+  chmod +x build.sh
+  ./build.sh # you'll see both unit tests output and build information.
+
+  chmod +x run.sh
+  ./run.sh
   ```
 
-* Build from docker (todo)
+  You'll see server logs from terminal like
+
+  ```
+  2022/08/08 07:16:17 authenticate_server: start listen on :8080
+  ```
+
+  By `curl http://127.0.0.1:8080/`, if you receive a `Hello` message, it means the http serving is already serving.
+
+* Build from docker
 
   ```sh
-  export GOPROXY=https://proxy.golang.com.cn,direct # for go proxy
   chmod +x build_docker.sh
   ./build_docker.sh
+
+  chmod +x run_docker.sh
+  ./run_docker.sh
   ```

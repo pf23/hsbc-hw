@@ -1,8 +1,10 @@
-mkdir bin
+WORDIR=${PWD}
+
+mkdir ${WORDIR}/bin
 
 # run unit tests
-cd cmd/ && go test -v .
-cd ../model/ && go test -v .
-cd ../serving/ && go test -v .
+cd ${WORDIR}/model/ && go test -v .
+cd ${WORDIR}/serving/ && go test -v .
 
-cd ../cmd && go build -o ../bin/server
+# build binary
+cd ${WORDIR}/cmd && go build -o ${WORDIR}/bin/server

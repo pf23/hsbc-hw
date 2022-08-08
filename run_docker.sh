@@ -1,0 +1,12 @@
+IMAGE_NAME="local/authsrv"
+IMAGE_VER="v1"
+CONTAINER_NAME="authsrv"
+COTAINER_PORT="8084"
+HOST_PORT="8080"
+
+docker rm ${CONTAINER_NAME}
+
+docker run -ti --name ${CONTAINER_NAME} \
+ -p ${HOST_PORT}:${COTAINER_PORT} \
+ --env PORT=${COTAINER_PORT} \
+ ${IMAGE_NAME}:${IMAGE_VER}

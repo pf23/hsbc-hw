@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	serverPort = ":8080"
-	serverAddr = "http://127.0.0.1:8080"
+	serverPort = ":8083"
+	serverAddr = "http://localhost:8083"
 )
 
 var (

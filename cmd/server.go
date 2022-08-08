@@ -8,6 +8,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 	"os/signal"
+	"strconv"
 
 	"hsbc-hw/serving"
 )
@@ -18,6 +19,11 @@ var (
 
 func main() {
 	flag.Parse()
+
+	tmp := os.Getenv("PORT")
+	if tmp != "" {
+		*port, _ = strconv.Atoi(tmp)
+	}
 	if *port < 0 || *port > 65535 {
 		log.Fatalf("authenticate_server: invalid --port, must be in [0, 65535], found %d", *port)
 	}
