@@ -1,1 +1,7 @@
-## TODO
+IMAGE_NAME="local/authsrv"
+IMAGE_VER="v1"
+DOCKERFILE_PATH="./"
+DOCKFILE="server.Dockerfile"
+
+#cp ${SERVER_BIN_PATH}/server ${DOCKERFILE_PATH}
+docker build -t ${IMAGE_NAME}:${IMAGE_VER} -f ${DOCKERFILE_PATH}/${DOCKFILE} ${DOCKERFILE_PATH}

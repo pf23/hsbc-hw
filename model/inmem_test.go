@@ -147,7 +147,3 @@ func TestAllRoles(t *testing.T) {
 	assert.Equal(t, 1, len(rs))
 	assert.Equal(t, r2.Name, rs[0].Name)
 }
-
-func TestConcurrent(t *testing.T) {
-
-}

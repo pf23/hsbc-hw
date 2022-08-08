@@ -30,7 +30,7 @@ type inmemEngine struct {
 	roles    map[string]*Role  // RoleName - Role
 	rolelock sync.RWMutex
 
-	// for token expiration
+	// For token expiration
 	tokenTTL                   time.Duration
 	tokenExpirationCheckPeriod time.Duration
 
