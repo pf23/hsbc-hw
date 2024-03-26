@@ -13,7 +13,7 @@ import (
 var (
 	TestTopic                = "test-topic"
 	ProjectID                = "openhabour-11223"
-	WebPushRegistrationToken = "fwZLrPYwBGSMgXpF3MAAN9:APA91bFaDsF0ACUbKhYlweJVuB9sd3xaueUpA-tFE7t5UO8VS3FLCJs8kOeiAG8fVFJ5G5zn33nBxgfiTo1pCfnIu6URlEn7DLsBX_1h3YpWZayXP0sPL6dM4TUGAUan2itJyBcmoH8M"
+	WebPushRegistrationToken = "fwZLrPYwBGSMgXpF3MAAN9:APA91bENrNrtMAjZFwyGLmH0Oag-ZbThihbq8DL0Ul_HYX4r4IAwjhWJyzOxc3YXZ68D3hxJv1eLxWTYqLf6rnyYva33pGxhiof14hCQmE2pRd0RcLZsXpdr1XZbymrBc6kyvcNQR8fa"
 	ServerKey                = "AAAAFDxzSXA:APA91bH-gWTcDFC905f2VdfwB66D8PbY9Pecg2NhsxHnzO9_I9WfieThAKnoJrZHTeLCIug57lDg2YYcHTtHT-SbNYR4GM-o9LEJbwve0o5dk6ClP_3Hc1dA6BURIUEUNZU_vb_QeZ9Y"
 	CredentialFile           = "/Users/pf/Desktop/fcm/openhabour-11223-firebase-adminsdk-bvhyz-dcf9f45c36.json"
 )
