@@ -13,9 +13,9 @@ import (
 var (
 	TestTopic                = "test-topic"
 	ProjectID                = "openhabour-11223"
-	WebPushRegistrationToken = "fwZLrPYwBGSMgXpF3MAAN9:APA91bENrNrtMAjZFwyGLmH0Oag-ZbThihbq8DL0Ul_HYX4r4IAwjhWJyzOxc3YXZ68D3hxJv1eLxWTYqLf6rnyYva33pGxhiof14hCQmE2pRd0RcLZsXpdr1XZbymrBc6kyvcNQR8fa"
+	WebPushRegistrationToken = "fwZLrPYwBGSMgXpF3MAAN9:APA91bGqozAMzCEHcggOZvlJVWDHikTtYXt5OaXdDX-adaLaqge-o96C63HE_LMnTizj4kKVYf619y4vwLdCztvR_BGzS87O3gs3zlR66_GGvVlyibUrLKAXe-mTG3Jf3TQb8cHIquGf"
 	ServerKey                = "AAAAFDxzSXA:APA91bH-gWTcDFC905f2VdfwB66D8PbY9Pecg2NhsxHnzO9_I9WfieThAKnoJrZHTeLCIug57lDg2YYcHTtHT-SbNYR4GM-o9LEJbwve0o5dk6ClP_3Hc1dA6BURIUEUNZU_vb_QeZ9Y"
-	CredentialFile           = "/Users/pf/Desktop/fcm/openhabour-11223-firebase-adminsdk-bvhyz-dcf9f45c36.json"
+	CredentialFile           = "/Users/pf/Desktop/fcm/oh-firebase.json"
 )
 
 func initClient() *messaging.Client {
@@ -38,7 +38,7 @@ func initClient() *messaging.Client {
 	if err != nil {
 		log.Fatalf("error getting Messaging client: %v\n", err)
 	}
-	log.Info("messaginbg client created")
+	log.Info("messaging client created")
 	return mClient
 }
 
